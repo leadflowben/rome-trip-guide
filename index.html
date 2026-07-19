@@ -787,7 +787,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <!-- MAP -->
   <section id="map">
     <h2>🗺️ Your Interactive Map</h2>
-    <p class="lead">Neighborhoods outlined, each Airbnb a flag with its price and booking link, every sight a pin. The <b>Filter</b> (top-right of the map) now does bedrooms, beds, <b>and a max nightly price up to $900</b> — drag it down to see only the cheaper places. The blue line is the Tiber; every home is on your side.</p>
+    <p class="lead">Neighborhoods outlined, each Airbnb a flag, every sight a pin, and the new <b>purple pins</b> are premium Plum Guide homes. The <b>Filter</b> (top-right of the map) does bedrooms, beds, <b>and a max nightly price up to $900</b> — drag it down to see only the cheaper places. The blue line is the Tiber; every home is on your side.</p>
     <div id="leafmap"></div>
     <div class="mapLegend" id="mapLegend"></div>
     <p class="rhythm">Tap a neighborhood, an Airbnb flag, or a sight dot for details. Pinch or use +/– to zoom — the page scrolls normally over the map. (Also saved as a standalone map in your artifacts.)</p>
@@ -838,7 +838,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
       <div class="prop"><div class="l"><div class="nm">CasaColosseo 3bdr 2ba <span class="br3">3 BR</span></div><div class="sp">3 bed · 4 beds · 2 bath · ★ 4.94 (90)</div><a class="view" href="https://www.airbnb.com/rooms/1380963892650980853?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$3,825</div><div class="nt">~$546/nt</div></div></div>
     </div>
 
-    <div class="flag"><b>My shortlist:</b> for a true 3-bedroom, <b>Urbana V Floor (Monti)</b> is the standout value at ~$401/nt with 192 reviews, and <b>CasaColosseo (Celio)</b> gives you 4 beds near the Colosseum for ~$546/nt. If two bedrooms with a third bed works, the <b>Ludovisi 1902 apartment</b> (~$466/nt, 4.99) is the best-located value. Want me to open the reviews and exact bed layouts on your top two or three?</div>
+    <div class="card">
+      <div class="areahd"><span class="swatch" style="border-color:#7b3f6e;background:#7b3f6e22"></span>Plum Guide — premium, hand-vetted</div>
+      <p class="rhythm" style="margin:6px 0 6px">Your wife's friend's tip. Plum Guide only lists homes that pass a strict in-person vetting, so quality is a given — think of it as an all-Superhost catalogue. These three are on your side of the river and match your size. Two things to know: Plum runs pricier than Airbnb, and it only shows nightly rates once you add dates — so tap through for live pricing on Dec 26–Jan 2.</p>
+      <div class="prop"><div class="l"><div class="nm">Golden Goose <span class="br3">3 BR</span></div><div class="sp">Campo Marzio / Spanish Steps · 3 bed · 4 beds · 2 bath · Plum Award</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/8822/golden-goose" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="nt">the friend's pick</div><div class="nt">price on dates</div></div></div>
+      <div class="prop"><div class="l"><div class="nm">The Charms of Rome <span class="br3">3 BR</span></div><div class="sp">Centro Storico (Sant'Eustachio, by the Pantheon) · 3 bed · 4 beds · 2 bath</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/152504/the-charms-of-rome" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="nt">price on dates</div></div></div>
+      <div class="prop"><div class="l"><div class="nm">The Monti Muse <span class="br2">2 BR</span></div><div class="sp">Monti, short walk to the Colosseum · 2 bed · 3 beds · 2 bath</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/1262707/the-monti-muse" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="nt">price on dates</div></div></div>
+    </div>
+
+    <div class="flag"><b>My shortlist:</b> for a true 3-bedroom, <b>Urbana V Floor (Monti)</b> is the standout value at ~$401/nt with 192 reviews, and <b>CasaColosseo (Celio)</b> gives you 4 beds near the Colosseum for ~$546/nt. If two bedrooms with a third bed works, the <b>Ludovisi 1902 apartment</b> (~$466/nt, 4.99) is the best-located value. On the premium end, the Plum Guide <b>Golden Goose</b> (your friend's pick) and <b>The Charms of Rome</b> are both lovely — just expect to pay up for that tier. Want me to open the reviews and exact bed layouts on your top two or three?</div>
     <div class="flag info"><b>Heads-up on two that dropped off:</b> the Trevi "Deluxe Penthouse" (4.76) and the Centro Storico "Massimi" (4.86) are gone — both fall below your 4.9 rating floor.</div>
   </section>
 
@@ -964,6 +972,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 if(typeof L==='undefined'){return;}
 var cfg=window.__MAPCFG||{mapId:'map',legendId:'legendBody',scrollZoom:true};
 function abnb(id){return 'https://www.airbnb.com/rooms/'+id+'?check_in=2026-12-26&check_out=2027-01-02&adults=4';}
+function plumUrl(s){return 'https://www.plumguide.com/homes/'+s.id+'/'+s.slug;}
 var map=L.map(cfg.mapId,{zoomControl:true,scrollWheelZoom:cfg.scrollZoom}).setView([41.8985,12.4820],14);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap © CARTO',subdomains:'abcd',maxZoom:19}).addTo(map);
 
@@ -992,7 +1001,7 @@ areas.forEach(function(a){
  L.marker(a.labelAt,{interactive:false,icon:L.divIcon({className:'areaLabel',html:a.name,iconSize:[120,16]})}).addTo(map);
 });
 
-// ---- Airbnb options: east bank, Superhost, 4.9+, >=3 beds, <= $900/nt ----
+// ---- Homes. Airbnb: Superhost, 4.9+, >=3 beds, <= $900/nt. Plum Guide: hand-vetted premium (price on dates). ----
 var stays=[
  {id:"714120288896517709",nm:"Urbana V Floor",area:"Monti",br:3,beds:3,nt:401,ba:"2ba",price:"$2,808",rat:"4.98 (192)",at:[41.8958,12.4930]},
  {id:"50859422",nm:"Designer apartment (1902 building)",area:"Ludovisi",br:2,beds:3,nt:466,ba:"2ba",price:"$3,260",rat:"4.99 (119)",at:[41.9066,12.4876]},
@@ -1003,21 +1012,31 @@ var stays=[
  {id:"1243613723733381455",nm:"Windows overlooking Piazza di Spagna",area:"Spanish Steps",br:3,beds:3,nt:686,ba:"3ba",price:"$4,799",rat:"4.9 (51)",at:[41.9050,12.4828]},
  {id:"1142634920938754897",nm:"Via Sistina home near Spanish Steps",area:"Spanish Steps",br:3,beds:3,nt:693,ba:"3ba",price:"$4,851",rat:"4.98 (42)",at:[41.9042,12.4848]},
  {id:"1388416117507489497",nm:"Spacious Monti flat, metro downstairs",area:"Monti",br:3,beds:3,nt:719,ba:"2ba",price:"$5,035",rat:"4.93 (55)",at:[41.8938,12.4948]},
- {id:"1628335019499125069",nm:"Elegant renovated flat in Rione Monti",area:"Monti",br:3,beds:3,nt:760,ba:"3ba",price:"$5,323",rat:"5.0 (21)",at:[41.8968,12.4918]}
+ {id:"1628335019499125069",nm:"Elegant renovated flat in Rione Monti",area:"Monti",br:3,beds:3,nt:760,ba:"3ba",price:"$5,323",rat:"5.0 (21)",at:[41.8968,12.4918]},
+ {id:"8822",slug:"golden-goose",nm:"Golden Goose",area:"Campo Marzio / Spanish Steps",br:3,beds:4,nt:null,ba:"2ba",plum:true,at:[41.9085,12.4776]},
+ {id:"152504",slug:"the-charms-of-rome",nm:"The Charms of Rome",area:"Centro Storico (Sant'Eustachio)",br:3,beds:4,nt:null,ba:"2ba",plum:true,at:[41.8980,12.4752]},
+ {id:"1262707",slug:"the-monti-muse",nm:"The Monti Muse",area:"Monti",br:2,beds:3,nt:null,ba:"2ba",plum:true,at:[41.8942,12.4936]}
 ];
 function flagIcon(br){return L.divIcon({className:'flagIcon',html:(br>=3?'🚩':'🏳️'),iconSize:[22,22],iconAnchor:[3,20],popupAnchor:[6,-16]});}
+function plumIcon(){return L.divIcon({className:'',iconSize:[20,20],iconAnchor:[10,20],popupAnchor:[0,-17],html:'<div style="width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#7b3f6e;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.45)"></div>'});}
 var stayMarkers=[];
 stays.forEach(function(s){
- var m=L.marker(s.at,{icon:flagIcon(s.br)}).bindPopup('<div class="pp"><div class="nm">'+s.nm+'</div><div class="meta">'+s.area+' · <b>'+s.br+'BR</b> · <b>'+s.beds+' beds</b> · '+s.ba+' · ★ '+s.rat+'</div><div class="price">'+s.price+' <span style="font-weight:500;color:#6a5a48">/ 7 nts (~$'+s.nt+'/nt)</span></div><span class="flag2" style="background:#e6efdc;color:#4c5230">✓ Superhost · 4.9+</span><br><a class="view2" href="'+abnb(s.id)+'" target="_blank" rel="noopener">View on Airbnb →</a></div>');
+ var m;
+ if(s.plum){
+  m=L.marker(s.at,{icon:plumIcon()}).bindPopup('<div class="pp"><div class="nm">'+s.nm+' <span style="color:#7b3f6e">◆</span></div><div class="meta">'+s.area+' · <b>'+s.br+'BR</b> · <b>'+s.beds+' beds</b> · '+s.ba+'</div><div class="price" style="color:#7b3f6e">Plum Guide — hand-vetted</div><span class="flag2" style="background:#efe1ee;color:#7b3f6e">Premium · price shows once you add dates</span><br><a class="view2" style="background:#7b3f6e" href="'+plumUrl(s)+'" target="_blank" rel="noopener">View on Plum Guide →</a></div>');
+ } else {
+  m=L.marker(s.at,{icon:flagIcon(s.br)}).bindPopup('<div class="pp"><div class="nm">'+s.nm+'</div><div class="meta">'+s.area+' · <b>'+s.br+'BR</b> · <b>'+s.beds+' beds</b> · '+s.ba+' · ★ '+s.rat+'</div><div class="price">'+s.price+' <span style="font-weight:500;color:#6a5a48">/ 7 nts (~$'+s.nt+'/nt)</span></div><span class="flag2" style="background:#e6efdc;color:#4c5230">✓ Superhost · 4.9+</span><br><a class="view2" href="'+abnb(s.id)+'" target="_blank" rel="noopener">View on Airbnb →</a></div>');
+ }
  m._br=s.br; m._beds=s.beds; m._nt=s.nt; m.addTo(map); stayMarkers.push(m);
 });
 
-// ---- Bedroom / bed / price filter ----
+// ---- Bedroom / bed / price filter (Plum homes have no listed price, so they ignore the price slider) ----
 var fBr=2, fBeds=3, fPrice=900;
 function applyFilter(){
  var n=0;
  stayMarkers.forEach(function(m){
-  var show=m._br>=fBr && m._beds>=fBeds && m._nt<=fPrice;
+  var priceOk=(m._nt==null)||(m._nt<=fPrice);
+  var show=m._br>=fBr && m._beds>=fBeds && priceOk;
   if(show){ if(!map.hasLayer(m)) m.addTo(map); n++; } else { if(map.hasLayer(m)) map.removeLayer(m); }
  });
  var c=document.getElementById('filterCount'); if(c) c.textContent=n+' shown';
@@ -1028,7 +1047,7 @@ var Filter=L.Control.extend({options:{position:'topright'},onAdd:function(){
    '<div class="grp" data-k="br"><span>Bedrooms</span><button data-v="2" class="on">2+</button><button data-v="3">3</button></div>'+
    '<div class="grp" data-k="beds"><span>Beds</span><button data-v="3" class="on">3+</button><button data-v="4">4+</button></div>'+
    '<div class="grp price"><span>Max $/nt</span><input id="priceRange" type="range" min="400" max="900" step="25" value="900"><b id="priceVal">$900</b></div>'+
-   '<div class="fcount" id="filterCount">10 shown</div>';
+   '<div class="fcount" id="filterCount">13 shown</div>';
  L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
  d.addEventListener('click',function(e){
   var b=e.target.closest('button'); if(!b) return;
@@ -1073,7 +1092,8 @@ var lb=document.getElementById(cfg.legendId);
 if(lb){
  var h='<div class="cap">Neighborhoods — east bank only (tap an area)</div>';
  areas.forEach(function(a){h+='<div class="row"><span class="sw" style="border-color:'+a.color+';background:'+a.color+'22"></span>'+a.name+'</div>';});
- h+='<div class="cap">Airbnb options (tap a flag)</div><div class="row"><span style="font-size:17px">🚩</span> 3-bedroom</div><div class="row"><span style="font-size:16px">🏳️</span> 2-bedroom (with 3+ beds)</div><div style="color:#6a5a48;font-size:11.5px;margin-top:2px">Every home: Superhost, 4.9+ rating, on the east bank.</div>';
+ h+='<div class="cap">Airbnb (tap a flag)</div><div class="row"><span style="font-size:17px">🚩</span> 3-bedroom</div><div class="row"><span style="font-size:16px">🏳️</span> 2-bedroom (with 3+ beds)</div><div style="color:#6a5a48;font-size:11.5px;margin-top:2px">Every Airbnb: Superhost, 4.9+, on the east bank.</div>';
+ h+='<div class="cap">Plum Guide (tap a purple pin)</div><div class="row"><span style="display:inline-block;width:15px;height:15px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#7b3f6e;border:2px solid #fff"></span> &nbsp;Hand-vetted premium home</div><div style="color:#6a5a48;font-size:11.5px;margin-top:2px">Price shows once you add your dates on Plum Guide.</div>';
  h+='<div class="cap">Sights (tap a dot)</div><div class="row"><span class="dot" style="background:#8f3623"></span> Ticketed — buy ahead (link inside)</div><div class="row"><span class="dot" style="background:#3a5a7a"></span> Free to visit</div>';
  h+='<div class="cap">Note</div><div style="color:#6a5a48">Use the <b>Filter</b> (top-right of the map) for bedrooms, beds, and a max nightly price up to $900. The blue line is the Tiber; every home is on your side (east).</div>';
  lb.innerHTML=h;
