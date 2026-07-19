@@ -728,7 +728,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 if(typeof L==='undefined'){return;}
 var cfg=window.__MAPCFG||{mapId:'map',legendId:'legendBody',scrollZoom:true};
 function abnb(id){return 'https://www.airbnb.com/rooms/'+id+'?check_in=2026-12-26&check_out=2027-01-02&adults=4';}
-function plumUrl(s){return 'https://www.plumguide.com/homes/'+s.id+'/'+s.slug;}
+function plumUrl(s){return 'https://www.plumguide.com/homes/'+s.id+'/'+s.slug+'?checkIn=2026-12-26&checkOut=2027-01-02&adults=4';}
 var map=L.map(cfg.mapId,{zoomControl:true,scrollWheelZoom:cfg.scrollZoom}).setView([41.8985,12.4820],14);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap © CARTO',subdomains:'abcd',maxZoom:19}).addTo(map);
 
@@ -769,9 +769,14 @@ var stays=[
  {id:"1142634920938754897",nm:"Via Sistina home near Spanish Steps",area:"Spanish Steps",br:3,beds:3,nt:693,ba:"3ba",price:"$4,851",rat:"4.98 (42)",at:[41.9042,12.4848]},
  {id:"1388416117507489497",nm:"Spacious Monti flat, metro downstairs",area:"Monti",br:3,beds:3,nt:719,ba:"2ba",price:"$5,035",rat:"4.93 (55)",at:[41.8938,12.4948]},
  {id:"1628335019499125069",nm:"Elegant renovated flat in Rione Monti",area:"Monti",br:3,beds:3,nt:760,ba:"3ba",price:"$5,323",rat:"5.0 (21)",at:[41.8968,12.4918]},
- {id:"8822",slug:"golden-goose",nm:"Golden Goose",area:"Campo Marzio / Spanish Steps",br:3,beds:4,nt:null,ba:"2ba",plum:true,at:[41.9085,12.4776]},
- {id:"152504",slug:"the-charms-of-rome",nm:"The Charms of Rome",area:"Centro Storico (Sant'Eustachio)",br:3,beds:4,nt:null,ba:"2ba",plum:true,at:[41.8980,12.4752]},
- {id:"1262707",slug:"the-monti-muse",nm:"The Monti Muse",area:"Monti",br:2,beds:3,nt:null,ba:"2ba",plum:true,at:[41.8942,12.4936]}
+ {id:"1270166",slug:"bridges-castles",nm:"Bridges & Castles",area:"Ponte (Centro Storico)",br:2,beds:3,nt:599,ba:"2ba",plum:true,at:[41.9006,12.4702]},
+ {id:"1411053",slug:"roman-getaway",nm:"Roman Getaway",area:"Ludovisi",br:2,beds:4,nt:618,ba:"2ba",plum:true,at:[41.9072,12.4884]},
+ {id:"17866",slug:"aperitivo",nm:"Aperitivo",area:"Monti",br:2,beds:3,nt:642,ba:"2ba",plum:true,at:[41.8952,12.4914]},
+ {id:"1275496",slug:"roman-piazza",nm:"Roman Piazza",area:"Campo Marzio",br:2,beds:3,nt:643,ba:"2ba",plum:true,at:[41.9048,12.4796]},
+ {id:"1331807",slug:"the-classic-abode",nm:"The Classic Abode",area:"Campo Marzio",br:2,beds:3,nt:658,ba:"2ba",plum:true,at:[41.9060,12.4788]},
+ {id:"1293742",slug:"barberini-bliss",nm:"Barberini Bliss",area:"Trevi",br:3,beds:4,nt:692,ba:"2ba",plum:true,at:[41.9024,12.4856]},
+ {id:"24065",slug:"odeon",nm:"Odeon",area:"Parione (Centro Storico)",br:3,beds:4,nt:733,ba:"2ba",plum:true,at:[41.8974,12.4714]},
+ {id:"72007",slug:"in-the-mood",nm:"In The Mood",area:"Monti",br:3,beds:4,nt:784,ba:"3ba",plum:true,at:[41.8944,12.4930]}
 ];
 function flagIcon(br){return L.divIcon({className:'flagIcon',html:(br>=3?'🚩':'🏳️'),iconSize:[22,22],iconAnchor:[3,20],popupAnchor:[6,-16]});}
 function plumIcon(){return L.divIcon({className:'',iconSize:[20,20],iconAnchor:[10,20],popupAnchor:[0,-17],html:'<div style="width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#7b3f6e;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.45)"></div>'});}
@@ -779,7 +784,7 @@ var stayMarkers=[];
 stays.forEach(function(s){
  var m;
  if(s.plum){
-  m=L.marker(s.at,{icon:plumIcon()}).bindPopup('<div class="pp"><div class="nm">'+s.nm+' <span style="color:#7b3f6e">◆</span></div><div class="meta">'+s.area+' · <b>'+s.br+'BR</b> · <b>'+s.beds+' beds</b> · '+s.ba+'</div><div class="price" style="color:#7b3f6e">Plum Guide — hand-vetted</div><span class="flag2" style="background:#efe1ee;color:#7b3f6e">Premium · price shows once you add dates</span><br><a class="view2" style="background:#7b3f6e" href="'+plumUrl(s)+'" target="_blank" rel="noopener">View on Plum Guide →</a></div>');
+  m=L.marker(s.at,{icon:plumIcon()}).bindPopup('<div class="pp"><div class="nm">'+s.nm+' <span style="color:#7b3f6e">◆</span></div><div class="meta">'+s.area+' · <b>'+s.br+'BR</b> · <b>'+s.beds+' beds</b> · '+s.ba+'</div><div class="price" style="color:#7b3f6e">$'+s.nt+' <span style="font-weight:500;color:#6a5a48">/ night · your dates</span></div><span class="flag2" style="background:#efe1ee;color:#7b3f6e">Plum Guide · hand-vetted · available</span><br><a class="view2" style="background:#7b3f6e" href="'+plumUrl(s)+'" target="_blank" rel="noopener">View on Plum Guide →</a></div>');
  } else {
   m=L.marker(s.at,{icon:flagIcon(s.br)}).bindPopup('<div class="pp"><div class="nm">'+s.nm+'</div><div class="meta">'+s.area+' · <b>'+s.br+'BR</b> · <b>'+s.beds+' beds</b> · '+s.ba+' · ★ '+s.rat+'</div><div class="price">'+s.price+' <span style="font-weight:500;color:#6a5a48">/ 7 nts (~$'+s.nt+'/nt)</span></div><span class="flag2" style="background:#e6efdc;color:#4c5230">✓ Superhost · 4.9+</span><br><a class="view2" href="'+abnb(s.id)+'" target="_blank" rel="noopener">View on Airbnb →</a></div>');
  }
@@ -803,7 +808,7 @@ var Filter=L.Control.extend({options:{position:'topright'},onAdd:function(){
    '<div class="grp" data-k="br"><span>Bedrooms</span><button data-v="2" class="on">2+</button><button data-v="3">3</button></div>'+
    '<div class="grp" data-k="beds"><span>Beds</span><button data-v="3" class="on">3+</button><button data-v="4">4+</button></div>'+
    '<div class="grp price"><span>Max $/nt</span><input id="priceRange" type="range" min="400" max="900" step="25" value="900"><b id="priceVal">$900</b></div>'+
-   '<div class="fcount" id="filterCount">13 shown</div>';
+   '<div class="fcount" id="filterCount">18 shown</div>';
  L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
  d.addEventListener('click',function(e){
   var b=e.target.closest('button'); if(!b) return;
@@ -848,8 +853,8 @@ var lb=document.getElementById(cfg.legendId);
 if(lb){
  var h='<div class="cap">Neighborhoods — east bank only (tap an area)</div>';
  areas.forEach(function(a){h+='<div class="row"><span class="sw" style="border-color:'+a.color+';background:'+a.color+'22"></span>'+a.name+'</div>';});
- h+='<div class="cap">Airbnb (tap a flag)</div><div class="row"><span style="font-size:17px">🚩</span> 3-bedroom</div><div class="row"><span style="font-size:16px">🏳️</span> 2-bedroom (with 3+ beds)</div><div style="color:#6a5a48;font-size:11.5px;margin-top:2px">Every Airbnb: Superhost, 4.9+, on the east bank.</div>';
- h+='<div class="cap">Plum Guide (tap a purple pin)</div><div class="row"><span style="display:inline-block;width:15px;height:15px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#7b3f6e;border:2px solid #fff"></span> &nbsp;Hand-vetted premium home</div><div style="color:#6a5a48;font-size:11.5px;margin-top:2px">Price shows once you add your dates on Plum Guide.</div>';
+ h+='<div class="cap">Airbnb (tap a flag)</div><div class="row"><span style="font-size:17px">🚩</span> 3-bedroom</div><div class="row"><span style="font-size:16px">🏳️</span> 2-bedroom (with 3+ beds)</div><div style="color:#6a5a48;font-size:11.5px;margin-top:2px">Every Airbnb: Superhost, 4.9+, east bank.</div>';
+ h+='<div class="cap">Plum Guide (tap a purple pin)</div><div class="row"><span style="display:inline-block;width:15px;height:15px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#7b3f6e;border:2px solid #fff"></span> &nbsp;Your wishlist picks</div><div style="color:#6a5a48;font-size:11.5px;margin-top:2px">All available for your dates · 2–3 bed · 2+ bath · under $900/nt.</div>';
  h+='<div class="cap">Sights (tap a dot)</div><div class="row"><span class="dot" style="background:#8f3623"></span> Ticketed — buy ahead (link inside)</div><div class="row"><span class="dot" style="background:#3a5a7a"></span> Free to visit</div>';
  h+='<div class="cap">Note</div><div style="color:#6a5a48">Use the <b>Filter</b> (top-right of the map) for bedrooms, beds, and a max nightly price up to $900. The blue line is the Tiber; every home is on your side (east).</div>';
  lb.innerHTML=h;
