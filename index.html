@@ -703,29 +703,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .block{margin:11px 0 0} .block .t{font-weight:700;font-size:14px;color:var(--olive);text-transform:uppercase;letter-spacing:.03em}
   ul{margin:6px 0 0;padding-left:20px} li{margin:4px 0}
   .book{font-size:13.5px;color:var(--terra-dk);background:#fff4ef;border-radius:8px;padding:7px 11px;margin:10px 0 0;border:1px dashed #e4b9ab}
-  .pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:11px;margin-left:4px}
-  .pick{background:var(--olive);color:#fff} .alt{background:#e7dcc6;color:#6a5230}
   .chk{list-style:none;padding:0;margin:8px 0 0}
   .chk li{position:relative;padding-left:28px;margin:8px 0}
   .chk li:before{content:"";position:absolute;left:0;top:3px;width:17px;height:17px;border:2px solid var(--terra);border-radius:5px}
   a{color:var(--terra-dk)}
-  .prop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
-  .prop:last-child{border-bottom:none}
-  .prop .l{flex:1}
-  .prop .nm{font-weight:700;font-size:15px}
-  .prop .sp{font-size:13px;color:var(--stone)}
-  .prop .r{text-align:right;white-space:nowrap}
-  .prop .pr{font-weight:800;color:var(--terra-dk);font-size:15px}
-  .prop .nt{font-size:12px;color:var(--stone)}
-  .prop a.view{display:inline-block;margin-top:3px;font-size:12.5px;font-weight:700}
-  .good2{font-size:12px;color:#4c5230;font-weight:700}
-  .br3{display:inline-block;font-size:10.5px;font-weight:800;background:#efe0b8;color:#7a5a12;padding:1px 6px;border-radius:9px;margin-left:6px;vertical-align:middle}
-  .br2{display:inline-block;font-size:10.5px;font-weight:800;background:#e7dcc6;color:#6a5230;padding:1px 6px;border-radius:9px;margin-left:6px;vertical-align:middle}
-  .areahd{font-weight:800;color:var(--terra-dk);font-size:15px;margin:2px 0 0;display:flex;align-items:center;gap:7px}
-  .swatch{width:13px;height:13px;border-radius:3px;display:inline-block;border:2px solid #999}
   .tk{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
   .tk:last-child{border-bottom:none}
   .tk .when{font-size:12.5px;color:var(--terra-dk);font-weight:700}
+  .sp{font-size:13px;color:var(--stone)}
   #leafmap{height:min(78vh,600px);width:100%;border:1px solid var(--line);border-radius:14px;overflow:hidden}
   #leafmap .leaflet-container{background:#f1ead9;font:inherit}
   .mapLegend{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:12px 0;font-size:13px}
@@ -734,15 +719,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .mapLegend .row{display:flex;align-items:center;gap:9px;margin:5px 0}
   .mapLegend .sw{width:15px;height:15px;border-radius:4px;border:2px solid #999;flex:0 0 auto}
   .mapLegend .dot{width:16px;height:16px;border-radius:50%;flex:0 0 auto}
-  .mapfilter{background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.22);padding:8px 10px}
-  .mapfilter .ttl{font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#7a3a20;margin-bottom:6px}
-  .mapfilter .grp{display:flex;align-items:center;gap:5px;margin:4px 0}
-  .mapfilter .grp>span{font-size:11px;color:#6a5a48;width:62px}
-  .mapfilter button{border:1px solid #ddd;background:#f7f2e8;color:#5a4a3c;border-radius:7px;padding:3px 10px;font-weight:700;cursor:pointer;font-size:12px}
-  .mapfilter button.on{background:#b0472f;color:#fff;border-color:#b0472f}
-  .mapfilter .grp.price input[type=range]{width:74px;accent-color:#b0472f;margin:0}
-  .mapfilter .grp.price b{font-size:12px;color:#8f3623;min-width:36px}
-  .mapfilter .fcount{font-size:10.5px;color:#7a6f60;margin-top:5px;text-align:right}
   .pp .nm{font-weight:800;font-size:14.5px;margin-bottom:2px}
   .pp .meta{color:#6a5a48;font-size:12.5px;margin:2px 0}
   .pp .price{font-weight:800;color:#8f3623}
@@ -762,14 +738,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <h1>Rome, Start to Finish</h1>
     <p>Arrive Sat Dec 26 · Depart Sat Jan 2 · 7 nights</p>
     <p>2 adults · 2 teens (18 &amp; 15) · balanced pace</p>
-    <span class="who">East bank · Superhosts · 4.9+ · 3+ beds · up to $900/nt</span>
+    <span class="who">Staying in Monti · sights, tickets, day trip &amp; itinerary</span>
   </div>
 </header>
 
 <nav class="toc">
   <a href="#map">Map</a>
-  <a href="#stay">Where to Stay</a>
-  <a href="#stays">The Apartments</a>
+  <a href="#stay">Your Stay</a>
   <a href="#closures">Closures</a>
   <a href="#tickets">Tickets</a>
   <a href="#itin">Day by Day</a>
@@ -781,78 +756,27 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <div class="wrap">
 
   <div class="flag">
-    <b>Read this first.</b> The three big sights go on the three clean weekdays (Dec 28–30), the holidays become slow days, and the day trip lands on Dec 27. Every apartment here is on the <b>east bank</b> (your side of the river), a <b>Superhost</b>, rated <b>4.9+</b>, has <b>at least 3 beds</b>, and comes in <b>under $900/night</b>.
+    <b>Read this first.</b> You're booked at the elegant flat in <b>Monti</b>. Your dates span two national holidays and New Year's, so the three big sights go on the three clean weekdays (Dec 28–30), the holidays become slow wander-and-eat days, and your out-of-town day trip lands on Dec 27. Everything below is the plan.
   </div>
 
   <!-- MAP -->
   <section id="map">
-    <h2>🗺️ Your Interactive Map</h2>
-    <p class="lead">Neighborhoods outlined, each Airbnb a flag, every sight a pin, and the new <b>purple pins</b> are premium Plum Guide homes. The <b>Filter</b> (top-right of the map) does bedrooms, beds, <b>and a max nightly price up to $900</b> — drag it down to see only the cheaper places. The blue line is the Tiber; every home is on your side.</p>
+    <h2>🗺️ Your Map</h2>
+    <p class="lead">Your apartment (🏠 in Monti) with every sight around it. Tap a sight dot for details and its ticket link — dark-red dots are ticketed, blue are free. The blue line is the Tiber.</p>
     <div id="leafmap"></div>
     <div class="mapLegend" id="mapLegend"></div>
-    <p class="rhythm">Tap a neighborhood, an Airbnb flag, or a sight dot for details. Pinch or use +/– to zoom — the page scrolls normally over the map. (Also saved as a standalone map in your artifacts.)</p>
+    <p class="rhythm">Tap the 🏠 for your apartment, a neighborhood outline, or a sight dot. Pinch or use +/– to zoom — the page scrolls normally over the map. (Also saved as a standalone map in your artifacts.)</p>
   </section>
 
-  <!-- WHERE TO STAY -->
+  <!-- YOUR STAY -->
   <section id="stay">
-    <h2>🏛️ Where to Stay — East Bank</h2>
-    <p class="lead">All walkable, all on your side of the river, all Superhosts rated 4.9+.</p>
-    <div class="card"><h3>Centro Storico — Pantheon / Piazza Navona <span class="pill pick">TOP PICK</span></h3>
-      <p>The dead center. Step outside and you're at the Pantheon, Navona, and Campo de' Fiori. Priciest area, lively on NYE — pick a place set back from the main piazza.</p></div>
-    <div class="card"><h3>Monti <span class="pill alt">MOST 3-BEDROOMS / VALUE</span></h3>
-      <p>Ivy streets, wine bars, a lived-in feel, ten minutes to the Colosseum. Where the most (and best-priced) three-bedrooms are.</p></div>
-    <div class="card"><h3>Ludovisi / Spanish Steps <span class="pill alt">ELEGANT</span></h3>
-      <p>Refined, great shopping, close to Villa Borghese. Several roomy 3-bedrooms just below the Spanish Steps.</p></div>
-    <div class="flag info"><b>Also on your side:</b> <b>Trevi</b> (dead central) and <b>Celio</b> (a calm pocket right by the Colosseum — good for quiet nights).</div>
-    <div class="flag good"><b>On any listing, confirm:</b> an <b>elevator</b> (many historic buildings are 3–4 flights of stone stairs), heating, and a <b>quiet courtyard-side bedroom</b> for NYE. Book soon.</div>
-  </section>
-
-  <!-- APARTMENTS -->
-  <section id="stays">
-    <h2>🏠 The Apartments</h2>
-    <p class="lead">Every home is on the <b>east bank</b>, a <b>Superhost</b>, rated <b>4.9+</b>, has <b>2–3 bedrooms and 3+ real beds</b>, and is <b>under $900/night</b> for your exact dates. <span class="br3">3 BR</span> marks the true three-bedrooms; <span class="br2">2 BR</span> marks two-bedrooms with a third bed. Prices are the 7-night total; links jump to Dec 26–Jan 2.</p>
-
+    <h2>🏠 Your Stay</h2>
+    <p class="lead">Booked and done — here's home base.</p>
     <div class="card">
-      <div class="areahd"><span class="swatch" style="border-color:#b0472f;background:#b0472f22"></span>Centro Storico</div>
-      <div class="prop"><div class="l"><div class="nm">Overlooking Campo de' Fiori (soundproof) <span class="br3">3 BR</span></div><div class="sp">3 bed · 3 beds · 2.5 bath · ★ 4.91 (185)</div><a class="view" href="https://www.airbnb.com/rooms/40582107?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$4,598</div><div class="nt">~$657/nt</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">A few steps from Campo de' Fiori <span class="br2">2 BR</span></div><div class="sp">2 bed · 3 beds · 2 bath · ★ 5.0 (133)</div><a class="view" href="https://www.airbnb.com/rooms/856461476484771209?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$4,277</div><div class="nt">~$611/nt</div></div></div>
+      <h3>Elegant renovated flat in Rione Monti</h3>
+      <p><b>Monti</b> · 3 bedrooms · 3 beds · 3 bathrooms · ★ 5.0 (21) · Superhost · ~$760/night ($5,323 for 7 nights)</p>
+      <p>A charming, lived-in neighborhood a ten-minute walk from the Colosseum and the Forum, with wine bars and trattorias right outside the door — and central enough to walk to most of the itinerary below. <a href="https://www.airbnb.com/rooms/1628335019499125069?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View the listing →</a></p>
     </div>
-
-    <div class="card">
-      <div class="areahd"><span class="swatch" style="border-color:#6a7043;background:#6a704322"></span>Monti</div>
-      <div class="prop"><div class="l"><div class="nm">Urbana V Floor <span class="br3">3 BR</span></div><div class="sp">3 bed · 3 beds · 2 bath · ★ 4.98 (192)</div><a class="view" href="https://www.airbnb.com/rooms/714120288896517709?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$2,808</div><div class="nt">~$401/nt</div><div class="good2">best value</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">Cesare Balbo by Vivora <span class="br3">3 BR</span></div><div class="sp">3 bed · 3 beds · 3 bath · ★ 4.92 (270)</div><a class="view" href="https://www.airbnb.com/rooms/30946650?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$4,336</div><div class="nt">~$619/nt</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">Spacious Monti flat, metro downstairs <span class="br3">3 BR</span></div><div class="sp">3 bed · 3 beds · 2 bath · ★ 4.93 (55)</div><a class="view" href="https://www.airbnb.com/rooms/1388416117507489497?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$5,035</div><div class="nt">~$719/nt</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">Elegant renovated flat in Rione Monti <span class="br3">3 BR</span></div><div class="sp">3 bed · 3 beds · 3 bath · ★ 5.0 (21)</div><a class="view" href="https://www.airbnb.com/rooms/1628335019499125069?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$5,323</div><div class="nt">~$760/nt</div></div></div>
-    </div>
-
-    <div class="card">
-      <div class="areahd"><span class="swatch" style="border-color:#8f5a9e;background:#8f5a9e22"></span>Ludovisi / Spanish Steps</div>
-      <div class="prop"><div class="l"><div class="nm">Designer apartment (1902 building) <span class="br2">2 BR</span></div><div class="sp">2 bed · 3 beds · 2 bath · ★ 4.99 (119)</div><a class="view" href="https://www.airbnb.com/rooms/50859422?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$3,260</div><div class="nt">~$466/nt</div><div class="good2">best value</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">Windows overlooking Piazza di Spagna <span class="br3">3 BR</span></div><div class="sp">3 bed · 3 beds · 3 bath · ★ 4.9 (51)</div><a class="view" href="https://www.airbnb.com/rooms/1243613723733381455?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$4,799</div><div class="nt">~$686/nt</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">Via Sistina home near the Spanish Steps <span class="br3">3 BR</span></div><div class="sp">3 bed · 3 beds · 3 bath · ★ 4.98 (42)</div><a class="view" href="https://www.airbnb.com/rooms/1142634920938754897?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$4,851</div><div class="nt">~$693/nt</div></div></div>
-    </div>
-
-    <div class="card">
-      <div class="areahd"><span class="swatch" style="border-color:#4c7a6a;background:#4c7a6a22"></span>Celio — by the Colosseum</div>
-      <div class="prop"><div class="l"><div class="nm">CasaColosseo 3bdr 2ba <span class="br3">3 BR</span></div><div class="sp">3 bed · 4 beds · 2 bath · ★ 4.94 (90)</div><a class="view" href="https://www.airbnb.com/rooms/1380963892650980853?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View on Airbnb →</a></div><div class="r"><div class="pr">$3,825</div><div class="nt">~$546/nt</div></div></div>
-    </div>
-
-    <div class="card">
-      <div class="areahd"><span class="swatch" style="border-color:#7b3f6e;background:#7b3f6e22"></span>Plum Guide — your wishlist picks</div>
-      <p class="rhythm" style="margin:6px 0 8px">The homes you starred on Plum Guide, priced for your exact dates. Every one is <b>available Dec 26–Jan 2</b>, east bank, 2–3 bedrooms with 2+ baths and 3+ real beds — same rules as the Airbnb list, and all <b>under $900/night</b>. Plum is curated and premium, so these sit a little above the Airbnb prices but they're in range. Cheapest first.</p>
-      <div class="prop"><div class="l"><div class="nm">Bridges &amp; Castles <span class="br2">2 BR</span></div><div class="sp">Ponte (Centro Storico) · 2 bed · 3 beds · 2 bath</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/1270166/bridges-castles?checkIn=2026-12-26&checkOut=2027-01-02&adults=4" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="pr">$599</div><div class="nt">/night</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">Roman Getaway <span class="br2">2 BR</span></div><div class="sp">Ludovisi · 2 bed · 4 beds · 2 bath</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/1411053/roman-getaway?checkIn=2026-12-26&checkOut=2027-01-02&adults=4" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="pr">$618</div><div class="nt">/night</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">Aperitivo <span class="br2">2 BR</span></div><div class="sp">Monti · 2 bed · 3 beds · 2 bath</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/17866/aperitivo?checkIn=2026-12-26&checkOut=2027-01-02&adults=4" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="pr">$642</div><div class="nt">/night</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">Roman Piazza <span class="br2">2 BR</span></div><div class="sp">Campo Marzio · 2 bed · 3 beds · 2 bath</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/1275496/roman-piazza?checkIn=2026-12-26&checkOut=2027-01-02&adults=4" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="pr">$643</div><div class="nt">/night</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">The Classic Abode <span class="br2">2 BR</span></div><div class="sp">Campo Marzio · 2 bed · 3 beds · 2 bath</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/1331807/the-classic-abode?checkIn=2026-12-26&checkOut=2027-01-02&adults=4" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="pr">$658</div><div class="nt">/night</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">Barberini Bliss <span class="br3">3 BR</span></div><div class="sp">Trevi · 3 bed · 4 beds · 2 bath</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/1293742/barberini-bliss?checkIn=2026-12-26&checkOut=2027-01-02&adults=4" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="pr">$692</div><div class="nt">/night</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">Odeon <span class="br3">3 BR</span></div><div class="sp">Parione (Centro Storico) · 3 bed · 4 beds · 2 bath</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/24065/odeon?checkIn=2026-12-26&checkOut=2027-01-02&adults=4" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="pr">$733</div><div class="nt">/night</div></div></div>
-      <div class="prop"><div class="l"><div class="nm">In The Mood <span class="br3">3 BR</span></div><div class="sp">Monti · 3 bed · 4 beds · 3 bath</div><a class="view" style="color:#7b3f6e" href="https://www.plumguide.com/homes/72007/in-the-mood?checkIn=2026-12-26&checkOut=2027-01-02&adults=4" target="_blank">View on Plum Guide →</a></div><div class="r"><div class="pr">$784</div><div class="nt">/night</div></div></div>
-    </div>
-
-    <div class="flag"><b>My shortlist:</b> for a true 3-bedroom, <b>Urbana V Floor (Monti)</b> is the standout value at ~$401/nt with 192 reviews, and <b>CasaColosseo (Celio)</b> gives you 4 beds near the Colosseum for ~$546/nt. If two bedrooms with a third bed works, the <b>Ludovisi 1902 apartment</b> (~$466/nt, 4.99) is the best-located value. On the Plum Guide side, your cheapest starred pick is <b>Bridges &amp; Castles</b> in Ponte at $599/nt, and <b>In The Mood</b> in Monti is the roomiest 3-bedroom at $784/nt. Want me to open the reviews and exact bed layouts on your top two or three?</div>
-    <div class="flag info"><b>Heads-up on two that dropped off:</b> the Trevi "Deluxe Penthouse" (4.76) and the Centro Storico "Massimi" (4.86) are gone — both fall below your 4.9 rating floor.</div>
   </section>
 
   <!-- CLOSURES -->
@@ -892,16 +816,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <!-- ITINERARY -->
   <section id="itin">
     <h2>📖 Day by Day</h2>
-    <p class="lead">One major thing a day, real downtime around it. Ticketed sights in the mornings; afternoons and evenings loose.</p>
+    <p class="lead">One major thing a day, real downtime around it. Ticketed sights in the mornings; afternoons and evenings loose. You're based in Monti, so the Colosseum end of town is your backyard.</p>
     <div class="card"><div class="dayhead"><span class="num">Day 1</span><span class="date">Sat · Dec 26</span><span class="tag easy">Arrival · easy</span></div>
       <p class="rhythm">You land jet-lagged. Nothing ticketed — just stay awake till a normal bedtime.</p>
-      <div class="block"><div class="t">Midday → evening</div><ul><li>Drop bags, first pizza or pasta nearby.</li><li>Easy loop: <b>Pantheon</b>, <b>Trevi Fountain</b>, gelato.</li><li><b>Piazza Navona Christmas market</b> in the evening — runs through Jan 6.</li><li>Early dinner close to home, then sleep.</li></ul></div></div>
+      <div class="block"><div class="t">Midday → evening</div><ul><li>Settle into the Monti flat, first pizza or pasta nearby.</li><li>Easy loop: <b>Pantheon</b>, <b>Trevi Fountain</b>, gelato.</li><li><b>Piazza Navona Christmas market</b> in the evening — runs through Jan 6.</li><li>Early dinner in Monti, then sleep.</li></ul></div></div>
     <div class="card"><div class="dayhead"><span class="num">Day 2</span><span class="date">Sun · Dec 27</span><span class="tag trip">Day trip — Orvieto</span></div>
       <p class="rhythm">Vatican's a free-Sunday zoo and the Colosseum deserves fresh legs, so this is the day to leave town. Details in the <a href="#orvieto">Day Trip</a> section.</p>
       <div class="block"><div class="t">The gist</div><ul><li>Morning train Roma Termini → <b>Orvieto</b> (~1h15), funicular up to the hilltop old town.</li><li>Wander, the stunning <b>Duomo</b>, long Umbrian lunch, optional caves.</li><li>Late-afternoon train back. Easy dinner in Rome.</li></ul></div></div>
     <div class="card"><div class="dayhead"><span class="num">Day 3</span><span class="date">Mon · Dec 28</span><span class="tag big">Colosseum + Forum + Palatine</span></div>
-      <div class="block"><div class="t">Morning</div><ul><li><b>Colosseum</b> on your 9:00–9:30 slot — consider the arena floor / underground for the teens.</li><li>Straight into the <b>Roman Forum + Palatine Hill</b> on the same ticket. 3–4 hours.</li></ul></div>
-      <div class="block"><div class="t">Afternoon</div><ul><li>Lunch and a wander in <b>Monti</b>, right behind the Forum.</li></ul></div></div>
+      <div class="block"><div class="t">Morning</div><ul><li><b>Colosseum</b> on your 9:00–9:30 slot — consider the arena floor / underground for the teens. It's a short walk from the flat.</li><li>Straight into the <b>Roman Forum + Palatine Hill</b> on the same ticket. 3–4 hours.</li></ul></div>
+      <div class="block"><div class="t">Afternoon</div><ul><li>Lunch and a wander back home in <b>Monti</b>, right behind the Forum.</li></ul></div></div>
     <div class="card"><div class="dayhead"><span class="num">Day 4</span><span class="date">Tue · Dec 29</span><span class="tag easy">Downtime + art</span></div>
       <div class="block"><div class="t">Late morning → evening</div><ul><li><b>Villa Borghese</b> park + the <b>Pincio</b> terrace overlook.</li><li>Optional: the <b>Borghese Gallery</b> (reserved 2-hour slot).</li><li>Down the <b>Spanish Steps</b> into the shopping streets; back through <b>Trevi</b> at night.</li></ul></div></div>
     <div class="card"><div class="dayhead"><span class="num">Day 5</span><span class="date">Wed · Dec 30</span><span class="tag big">Vatican + Sistine + St. Peter's</span></div>
@@ -930,30 +854,29 @@ svg.leaflet-image-layer.leaflet-interactive path {
       <li><b>Up top:</b> the <b>funicular</b> climbs to Piazza Cahen; walk or hop the shuttle to the Duomo.</li>
       <li><b>Do:</b> the <b>Duomo</b> and its San Brizio frescoes, the <b>Orvieto Underground</b> caves, and the <b>Pozzo di San Patrizio</b> (a giant double-helix well the teens will love).</li>
       <li><b>Eat:</b> long lunch — <b>umbrichelli</b> pasta, wild boar, and the local <b>Orvieto Classico</b> white.</li>
-      <li><b>Back:</b> a late-afternoon train to Rome; easy dinner near your apartment.</li></ul></div>
+      <li><b>Back:</b> a late-afternoon train to Rome; easy dinner near the flat.</li></ul></div>
     <div class="flag info"><b>If you'd rather go bigger:</b> <b>Florence</b> is doable — ~1h30 each way on the high-speed <b>Frecciarossa</b> (book those in advance). A lot to see in a day, but it works. Orvieto is the more relaxed, better-fit pick.</div>
   </section>
 
   <!-- NYE -->
   <section id="nye">
     <h2>🥂 New Year's Eve Dinner</h2>
-    <p class="lead">You're open to a $150–250/person all-inclusive prix-fixe ("cenone") that's an easy walk. All the spots below are on your side of the river.</p>
+    <p class="lead">You're open to a $150–250/person all-inclusive prix-fixe ("cenone") that's an easy walk from Monti.</p>
     <div class="card"><h3>How NYE dinner works in Rome</h3>
-      <p>On Dec 31 most good restaurants drop their normal menu for a single festive <b>cenone</b> — a long multi-course set menu, often with wine and a midnight toast, usually right in your $150–250 range. Menus and prices don't post until roughly <b>November</b>, and the best tables book out. So lock your apartment first, then reserve the dinner as soon as menus post. I can handle the reservation once you've chosen where you're staying.</p></div>
-    <div class="card"><h3>Candidates by area (all east bank, in your price band)</h3>
-      <ul><li><b>Near Piazza Navona / Centro Storico:</b> <b>Il Convivio Troiani</b> (refined, special-occasion) or <b>Casa Bleve</b> (grand room, classic).</li>
-      <li><b>Campo de' Fiori:</b> <b>Roscioli</b> — famous, intimate, food-forward; books out first.</li>
-      <li><b>Near the Pantheon:</b> <b>Casa Coppelle</b> — pretty, date-night feel, fine for teens.</li>
-      <li><b>Spanish Steps / Tridente:</b> a hotel-rooftop or classic dining room here pairs perfectly with the <b>Pincio</b> fireworks after.</li></ul></div>
-    <div class="flag"><b>Next step:</b> once you choose the apartment, tell me the neighborhood and I'll shortlist the closest two or three, check their NYE menus when they post, and book the table for four.</div>
+      <p>On Dec 31 most good restaurants drop their normal menu for a single festive <b>cenone</b> — a long multi-course set menu, often with wine and a midnight toast, usually right in your $150–250 range. Menus and prices don't post until roughly <b>November</b>, and the best tables book out. Reserve as soon as menus post — I can handle that for you.</p></div>
+    <div class="card"><h3>Candidates by area (all walkable-ish from Monti)</h3>
+      <ul><li><b>Monti / nearby:</b> a Monti trattoria doing a cenone is the easiest — no cab, roll home. I'll scout the best one when menus post.</li>
+      <li><b>Near Piazza Navona / Centro Storico:</b> <b>Il Convivio Troiani</b> (refined) or <b>Casa Bleve</b> (grand room).</li>
+      <li><b>Campo de' Fiori:</b> <b>Roscioli</b> — famous, intimate; books out first.</li>
+      <li><b>Near the Pantheon:</b> <b>Casa Coppelle</b> — pretty, fine for teens.</li></ul></div>
+    <div class="flag"><b>Next step:</b> tell me the vibe you want (walk-home-easy in Monti vs. a special-occasion room) and I'll shortlist two or three, check their NYE menus when they post, and book the table for four.</div>
   </section>
 
   <!-- BOOK NOW -->
   <section id="book">
     <h2>✅ Book These Before You Go</h2>
-    <p class="lead">Roughly in order of urgency.</p>
+    <p class="lead">Apartment's done. These are what's left, roughly in order of urgency.</p>
     <ul class="chk">
-      <li><b>Apartment</b> — east-bank Superhost 3-bedrooms fill fastest over Christmas. Lock this first.</li>
       <li><b>Colosseum combined ticket (Dec 28)</b> — releases 30 days ahead and sells out. Alarm on release day.</li>
       <li><b>Vatican early entry (Dec 30)</b> — book ~60 days out, earliest slot.</li>
       <li><b>Borghese Gallery (Dec 29, optional)</b> — reserved 2-hour slot.</li>
@@ -964,7 +887,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <div class="flag good"><b>Guides pay off twice:</b> a licensed guide for the Colosseum and the Vatican keeps the teens engaged and skips the worst lines.</div>
   </section>
 
-  <footer><p>Built for Ben's family trip · east-bank Superhosts, 4.9+, 3+ beds, under $900/night · hours, closures &amp; ticket sites confirmed against official Vatican Museums and Parco archeologico del Colosseo sources for Dec 2026 – Jan 2027.</p></footer>
+  <footer><p>Built for Ben's family trip · staying in Monti · hours, closures &amp; ticket sites confirmed against official Vatican Museums and Parco archeologico del Colosseo sources for Dec 2026 – Jan 2027.</p></footer>
 </div>
 <script>/* @preserve
  * Leaflet 1.9.4, a JS library for interactive maps. https://leafletjs.com
@@ -977,7 +900,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 if(typeof L==='undefined'){return;}
 var cfg=window.__MAPCFG||{mapId:'map',legendId:'legendBody',scrollZoom:true};
 function abnb(id){return 'https://www.airbnb.com/rooms/'+id+'?check_in=2026-12-26&check_out=2027-01-02&adults=4';}
-function plumUrl(s){return 'https://www.plumguide.com/homes/'+s.id+'/'+s.slug+'?checkIn=2026-12-26&checkOut=2027-01-02&adults=4';}
 var map=L.map(cfg.mapId,{zoomControl:true,scrollWheelZoom:cfg.scrollZoom}).setView([41.8985,12.4820],14);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap © CARTO',subdomains:'abcd',maxZoom:19}).addTo(map);
 
@@ -993,88 +915,29 @@ L.polyline(tiber,{color:'#c4d9e4',weight:3,opacity:.9,interactive:false}).addTo(
 ].forEach(function(r){L.polyline(r,{color:'#ddd0b9',weight:5,opacity:.9,interactive:false}).addTo(map);});
 L.marker([41.8905,12.4700],{interactive:false,icon:L.divIcon({className:'areaLabel',html:'<span style="color:#5a7a8a">Tiber →</span>',iconSize:[54,14]})}).addTo(map);
 
-// ---- Neighborhoods (east bank only) ----
+// ---- Neighborhoods (kept for orientation) ----
 var areas=[
- {name:"Centro Storico",color:"#b0472f",labelAt:[41.8972,12.4735],why:"Top pick. Pantheon, Navona, Campo de' Fiori out your door. Most walkable, priciest, lively on NYE.",poly:[[41.9012,12.4700],[41.9016,12.4772],[41.8974,12.4792],[41.8934,12.4762],[41.8936,12.4706],[41.8976,12.4684]]},
- {name:"Monti",color:"#6a7043",labelAt:[41.8950,12.4928],why:"Local, charming, walk to the Colosseum. Better value, good for families. Most of your 3-bedrooms are here.",poly:[[41.8978,12.4898],[41.8978,12.4962],[41.8930,12.4966],[41.8914,12.4914],[41.8946,12.4888]]},
- {name:"Ludovisi / Spanish Steps",color:"#8f5a9e",labelAt:[41.9075,12.4868],why:"Elegant, shopping, near the Spanish Steps and Villa Borghese.",poly:[[41.9098,12.4818],[41.9098,12.4912],[41.9044,12.4908],[41.9040,12.4818]]},
- {name:"Trevi",color:"#c08a2d",labelAt:[41.9010,12.4838],why:"Dead centre by the Trevi Fountain. Walk everywhere; busy with day-trippers.",poly:[[41.9026,12.4808],[41.9026,12.4862],[41.8992,12.4862],[41.8992,12.4808]]},
- {name:"Celio",color:"#4c7a6a",labelAt:[41.8868,12.4952],why:"Quiet pocket right by the Colosseum. Calm nights, quick walk to ancient Rome.",poly:[[41.8892,12.4918],[41.8892,12.4992],[41.8848,12.4986],[41.8848,12.4914]]}
+ {name:"Centro Storico",color:"#b0472f",labelAt:[41.8972,12.4735],why:"Pantheon, Navona, Campo de' Fiori — the historic heart.",poly:[[41.9012,12.4700],[41.9016,12.4772],[41.8974,12.4792],[41.8934,12.4762],[41.8936,12.4706],[41.8976,12.4684]]},
+ {name:"Monti",color:"#6a7043",labelAt:[41.8950,12.4928],why:"Your neighborhood — charming, local, a short walk to the Colosseum.",poly:[[41.8978,12.4898],[41.8978,12.4962],[41.8930,12.4966],[41.8914,12.4914],[41.8946,12.4888]]},
+ {name:"Ludovisi / Spanish Steps",color:"#8f5a9e",labelAt:[41.9075,12.4868],why:"Elegant, shopping, near Villa Borghese.",poly:[[41.9098,12.4818],[41.9098,12.4912],[41.9044,12.4908],[41.9040,12.4818]]},
+ {name:"Trevi",color:"#c08a2d",labelAt:[41.9010,12.4838],why:"Dead centre by the Trevi Fountain.",poly:[[41.9026,12.4808],[41.9026,12.4862],[41.8992,12.4862],[41.8992,12.4808]]},
+ {name:"Celio",color:"#4c7a6a",labelAt:[41.8868,12.4952],why:"Quiet pocket right by the Colosseum.",poly:[[41.8892,12.4918],[41.8892,12.4992],[41.8848,12.4986],[41.8848,12.4914]]}
 ];
 areas.forEach(function(a){
  L.polygon(a.poly,{color:a.color,weight:3,opacity:.9,fillColor:a.color,fillOpacity:.12}).bindPopup('<div class="pp"><div class="nm" style="color:'+a.color+'">'+a.name+'</div><div class="meta">'+a.why+'</div></div>').addTo(map);
  L.marker(a.labelAt,{interactive:false,icon:L.divIcon({className:'areaLabel',html:a.name,iconSize:[120,16]})}).addTo(map);
 });
 
-// ---- Homes. Airbnb: Superhost, 4.9+, >=3 beds, <= $900/nt. Plum Guide: hand-vetted premium (price on dates). ----
-var stays=[
- {id:"714120288896517709",nm:"Urbana V Floor",area:"Monti",br:3,beds:3,nt:401,ba:"2ba",price:"$2,808",rat:"4.98 (192)",at:[41.8958,12.4930]},
- {id:"50859422",nm:"Designer apartment (1902 building)",area:"Ludovisi",br:2,beds:3,nt:466,ba:"2ba",price:"$3,260",rat:"4.99 (119)",at:[41.9066,12.4876]},
- {id:"1380963892650980853",nm:"CasaColosseo 3bdr 2ba",area:"Celio",br:3,beds:4,nt:546,ba:"2ba",price:"$3,825",rat:"4.94 (90)",at:[41.8876,12.4952]},
- {id:"856461476484771209",nm:"A few steps from Campo de' Fiori",area:"Centro Storico",br:2,beds:3,nt:611,ba:"2ba",price:"$4,277",rat:"5.0 (133)",at:[41.8956,12.4722]},
- {id:"30946650",nm:"Cesare Balbo by Vivora",area:"Monti",br:3,beds:3,nt:619,ba:"3ba",price:"$4,336",rat:"4.92 (270)",at:[41.8945,12.4908]},
- {id:"40582107",nm:"Overlooking Campo de' Fiori (soundproof)",area:"Centro Storico",br:3,beds:3,nt:657,ba:"2.5ba",price:"$4,598",rat:"4.91 (185)",at:[41.8948,12.4732]},
- {id:"1243613723733381455",nm:"Windows overlooking Piazza di Spagna",area:"Spanish Steps",br:3,beds:3,nt:686,ba:"3ba",price:"$4,799",rat:"4.9 (51)",at:[41.9050,12.4828]},
- {id:"1142634920938754897",nm:"Via Sistina home near Spanish Steps",area:"Spanish Steps",br:3,beds:3,nt:693,ba:"3ba",price:"$4,851",rat:"4.98 (42)",at:[41.9042,12.4848]},
- {id:"1388416117507489497",nm:"Spacious Monti flat, metro downstairs",area:"Monti",br:3,beds:3,nt:719,ba:"2ba",price:"$5,035",rat:"4.93 (55)",at:[41.8938,12.4948]},
- {id:"1628335019499125069",nm:"Elegant renovated flat in Rione Monti",area:"Monti",br:3,beds:3,nt:760,ba:"3ba",price:"$5,323",rat:"5.0 (21)",at:[41.8968,12.4918]},
- {id:"1270166",slug:"bridges-castles",nm:"Bridges & Castles",area:"Ponte (Centro Storico)",br:2,beds:3,nt:599,ba:"2ba",plum:true,at:[41.9006,12.4702]},
- {id:"1411053",slug:"roman-getaway",nm:"Roman Getaway",area:"Ludovisi",br:2,beds:4,nt:618,ba:"2ba",plum:true,at:[41.9072,12.4884]},
- {id:"17866",slug:"aperitivo",nm:"Aperitivo",area:"Monti",br:2,beds:3,nt:642,ba:"2ba",plum:true,at:[41.8952,12.4914]},
- {id:"1275496",slug:"roman-piazza",nm:"Roman Piazza",area:"Campo Marzio",br:2,beds:3,nt:643,ba:"2ba",plum:true,at:[41.9048,12.4796]},
- {id:"1331807",slug:"the-classic-abode",nm:"The Classic Abode",area:"Campo Marzio",br:2,beds:3,nt:658,ba:"2ba",plum:true,at:[41.9060,12.4788]},
- {id:"1293742",slug:"barberini-bliss",nm:"Barberini Bliss",area:"Trevi",br:3,beds:4,nt:692,ba:"2ba",plum:true,at:[41.9024,12.4856]},
- {id:"24065",slug:"odeon",nm:"Odeon",area:"Parione (Centro Storico)",br:3,beds:4,nt:733,ba:"2ba",plum:true,at:[41.8974,12.4714]},
- {id:"72007",slug:"in-the-mood",nm:"In The Mood",area:"Monti",br:3,beds:4,nt:784,ba:"3ba",plum:true,at:[41.8944,12.4930]}
-];
-function flagIcon(br){return L.divIcon({className:'flagIcon',html:(br>=3?'🚩':'🏳️'),iconSize:[22,22],iconAnchor:[3,20],popupAnchor:[6,-16]});}
-function plumIcon(){return L.divIcon({className:'',iconSize:[20,20],iconAnchor:[10,20],popupAnchor:[0,-17],html:'<div style="width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#7b3f6e;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.45)"></div>'});}
-var stayMarkers=[];
-stays.forEach(function(s){
- var m;
- if(s.plum){
-  m=L.marker(s.at,{icon:plumIcon()}).bindPopup('<div class="pp"><div class="nm">'+s.nm+' <span style="color:#7b3f6e">◆</span></div><div class="meta">'+s.area+' · <b>'+s.br+'BR</b> · <b>'+s.beds+' beds</b> · '+s.ba+'</div><div class="price" style="color:#7b3f6e">$'+s.nt+' <span style="font-weight:500;color:#6a5a48">/ night · your dates</span></div><span class="flag2" style="background:#efe1ee;color:#7b3f6e">Plum Guide · hand-vetted · available</span><br><a class="view2" style="background:#7b3f6e" href="'+plumUrl(s)+'" target="_blank" rel="noopener">View on Plum Guide →</a></div>');
- } else {
-  m=L.marker(s.at,{icon:flagIcon(s.br)}).bindPopup('<div class="pp"><div class="nm">'+s.nm+'</div><div class="meta">'+s.area+' · <b>'+s.br+'BR</b> · <b>'+s.beds+' beds</b> · '+s.ba+' · ★ '+s.rat+'</div><div class="price">'+s.price+' <span style="font-weight:500;color:#6a5a48">/ 7 nts (~$'+s.nt+'/nt)</span></div><span class="flag2" style="background:#e6efdc;color:#4c5230">✓ Superhost · 4.9+</span><br><a class="view2" href="'+abnb(s.id)+'" target="_blank" rel="noopener">View on Airbnb →</a></div>');
- }
- m._br=s.br; m._beds=s.beds; m._nt=s.nt; m.addTo(map); stayMarkers.push(m);
-});
-
-// ---- Bedroom / bed / price filter (Plum homes have no listed price, so they ignore the price slider) ----
-var fBr=2, fBeds=3, fPrice=900;
-function applyFilter(){
- var n=0;
- stayMarkers.forEach(function(m){
-  var priceOk=(m._nt==null)||(m._nt<=fPrice);
-  var show=m._br>=fBr && m._beds>=fBeds && priceOk;
-  if(show){ if(!map.hasLayer(m)) m.addTo(map); n++; } else { if(map.hasLayer(m)) map.removeLayer(m); }
- });
- var c=document.getElementById('filterCount'); if(c) c.textContent=n+' shown';
-}
-var Filter=L.Control.extend({options:{position:'topright'},onAdd:function(){
- var d=L.DomUtil.create('div','mapfilter');
- d.innerHTML='<div class="ttl">Filter homes</div>'+
-   '<div class="grp" data-k="br"><span>Bedrooms</span><button data-v="2" class="on">2+</button><button data-v="3">3</button></div>'+
-   '<div class="grp" data-k="beds"><span>Beds</span><button data-v="3" class="on">3+</button><button data-v="4">4+</button></div>'+
-   '<div class="grp price"><span>Max $/nt</span><input id="priceRange" type="range" min="400" max="900" step="25" value="900"><b id="priceVal">$900</b></div>'+
-   '<div class="fcount" id="filterCount">18 shown</div>';
- L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
- d.addEventListener('click',function(e){
-  var b=e.target.closest('button'); if(!b) return;
-  var grp=b.parentElement; Array.prototype.forEach.call(grp.querySelectorAll('button'),function(x){x.classList.remove('on');});
-  b.classList.add('on');
-  var k=grp.getAttribute('data-k'); if(k==='br') fBr=+b.getAttribute('data-v'); else fBeds=+b.getAttribute('data-v');
-  applyFilter();
- });
- d.addEventListener('input',function(e){
-  if(e.target.id!=='priceRange') return;
-  fPrice=+e.target.value;
-  var pv=document.getElementById('priceVal'); if(pv) pv.textContent='$'+fPrice;
-  applyFilter();
- });
- return d;
-}});
-map.addControl(new Filter());
+// ---- Your booked home ----
+var home={id:"1628335019499125069",nm:"Elegant renovated flat in Rione Monti",area:"Monti",br:3,beds:3,nt:760,ba:"3ba",price:"$5,323",rat:"5.0 (21)",at:[41.8968,12.4918]};
+var homeIcon=L.divIcon({className:'flagIcon',html:'🏠',iconSize:[26,26],iconAnchor:[6,24],popupAnchor:[7,-18]});
+var homeMarker=L.marker(home.at,{icon:homeIcon,zIndexOffset:1000}).bindPopup(
+ '<div class="pp"><div class="nm">'+home.nm+'</div>'+
+ '<div class="meta">'+home.area+' · <b>'+home.br+'BR</b> · <b>'+home.beds+' beds</b> · '+home.ba+' · ★ '+home.rat+'</div>'+
+ '<div class="price">'+home.price+' <span style="font-weight:500;color:#6a5a48">/ 7 nts (~$'+home.nt+'/nt)</span></div>'+
+ '<span class="flag2" style="background:#e6efdc;color:#4c5230">★ Your booked stay · Superhost</span><br>'+
+ '<a class="view2" href="'+abnb(home.id)+'" target="_blank" rel="noopener">View on Airbnb →</a></div>'
+).addTo(map);
 
 // ---- Sights ----
 var sights=[
@@ -1100,18 +963,17 @@ sights.forEach(function(p){var t=!!p.tk;var h='<div class="pp"><div class="nm">'
 // ---- Legend ----
 var lb=document.getElementById(cfg.legendId);
 if(lb){
- var h='<div class="cap">Neighborhoods — east bank only (tap an area)</div>';
+ var h='<div class="cap">Where you\'re staying</div><div class="row"><span style="font-size:18px">🏠</span> Elegant flat in Rione Monti (booked)</div>';
+ h+='<div class="cap">Neighborhoods (for orientation)</div>';
  areas.forEach(function(a){h+='<div class="row"><span class="sw" style="border-color:'+a.color+';background:'+a.color+'22"></span>'+a.name+'</div>';});
- h+='<div class="cap">Airbnb (tap a flag)</div><div class="row"><span style="font-size:17px">🚩</span> 3-bedroom</div><div class="row"><span style="font-size:16px">🏳️</span> 2-bedroom (with 3+ beds)</div><div style="color:#6a5a48;font-size:11.5px;margin-top:2px">Every Airbnb: Superhost, 4.9+, east bank.</div>';
- h+='<div class="cap">Plum Guide (tap a purple pin)</div><div class="row"><span style="display:inline-block;width:15px;height:15px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#7b3f6e;border:2px solid #fff"></span> &nbsp;Your wishlist picks</div><div style="color:#6a5a48;font-size:11.5px;margin-top:2px">All available for your dates · 2–3 bed · 2+ bath · under $900/nt.</div>';
  h+='<div class="cap">Sights (tap a dot)</div><div class="row"><span class="dot" style="background:#8f3623"></span> Ticketed — buy ahead (link inside)</div><div class="row"><span class="dot" style="background:#3a5a7a"></span> Free to visit</div>';
- h+='<div class="cap">Note</div><div style="color:#6a5a48">Use the <b>Filter</b> (top-right of the map) for bedrooms, beds, and a max nightly price up to $900. The blue line is the Tiber; every home is on your side (east).</div>';
+ h+='<div class="cap">Note</div><div style="color:#6a5a48">The 🏠 is your apartment in Monti. The blue line is the Tiber; tap any dot for a sight and its ticket link.</div>';
  lb.innerHTML=h;
 }
 
-var bounds=L.latLngBounds([].concat.apply([],areas.map(function(a){return a.poly;})).concat(stays.map(function(s){return s.at;})).concat(sights.map(function(s){return s.at;})));
+var bounds=L.latLngBounds([].concat.apply([],areas.map(function(a){return a.poly;})).concat([home.at]).concat(sights.map(function(s){return s.at;})));
 map.fitBounds(bounds,{padding:[24,24]});
-setTimeout(function(){map.invalidateSize();applyFilter();},300);
+setTimeout(function(){map.invalidateSize();homeMarker.openPopup();},350);
 })();
 </script>
 </body>
