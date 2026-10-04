@@ -699,6 +699,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .dayhead .tag{font-size:12px;background:var(--shade);color:#6a5a48;padding:3px 9px;border-radius:12px}
   .tag.holiday{background:#fbe3dc;color:var(--terra-dk)} .tag.big{background:#efe0b8;color:#7a5a12}
   .tag.easy{background:#e6efdc;color:#4c5230} .tag.trip{background:#e3edf5;color:#2c4763}
+  .tag.food{background:#f3e1ec;color:#7a3059}
   .rhythm{font-size:13px;color:var(--stone);margin:8px 0 0}
   .block{margin:11px 0 0} .block .t{font-weight:700;font-size:14px;color:var(--olive);text-transform:uppercase;letter-spacing:.03em}
   ul{margin:6px 0 0;padding-left:20px} li{margin:4px 0}
@@ -756,7 +757,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <div class="wrap">
 
   <div class="flag">
-    <b>Read this first.</b> You're booked at the elegant flat in <b>Monti</b>. Your dates span two national holidays and New Year's, so the three big sights go on the three clean weekdays (Dec 28–30), the holidays become slow wander-and-eat days, and your out-of-town day trip lands on Dec 27. Everything below is the plan.
+    <b>Read this first.</b> You're booked at the elegant flat in <b>Monti</b>. Your dates span two national holidays and New Year's, so the plan threads around the closures: the <b>Colosseum</b> on your first full day (Dec 27, right in your backyard), a lighter centro day with a <b>pasta cooking class</b> (Dec 28), the <b>Vatican</b> Pristine Sistine tour (Dec 29), a day trip to <b>Orvieto</b> (Dec 30), then New Year's and a slow holiday. The two marquee sights sit a day apart on purpose, so you're never doing back-to-back blockbusters. Everything below is the plan.
   </div>
 
   <!-- MAP -->
@@ -787,30 +788,31 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <table>
       <tr><th>Date</th><th>Vatican</th><th>Colosseum</th><th>Plan</th></tr>
       <tr><td class="day">Sat 12/26</td><td class="no">Closed</td><td class="yes">Open</td><td>Arrive — easy</td></tr>
-      <tr><td class="day">Sun 12/27</td><td>"Free" mob</td><td class="yes">Open</td><td>Day trip ✓</td></tr>
-      <tr><td class="day">Mon 12/28</td><td class="yes">Open</td><td class="yes">Open</td><td>Colosseum ✓</td></tr>
-      <tr><td class="day">Tue 12/29</td><td class="yes">Open</td><td class="yes">Open</td><td>Downtime / Borghese</td></tr>
-      <tr><td class="day">Wed 12/30</td><td class="yes">Open</td><td class="yes">Open</td><td>Vatican ✓</td></tr>
+      <tr><td class="day">Sun 12/27</td><td>"Free" mob</td><td class="yes">Open</td><td>Colosseum ✓</td></tr>
+      <tr><td class="day">Mon 12/28</td><td class="yes">Open</td><td class="yes">Open</td><td>Centro + cooking class</td></tr>
+      <tr><td class="day">Tue 12/29</td><td class="yes">Open</td><td class="yes">Open</td><td>Vatican tour ✓</td></tr>
+      <tr><td class="day">Wed 12/30</td><td class="yes">Open</td><td class="yes">Open</td><td>Day trip — Orvieto ✓</td></tr>
       <tr><td class="day">Thu 12/31</td><td class="no">Closed</td><td class="yes">Open*</td><td>NYE</td></tr>
       <tr><td class="day">Fri 1/1</td><td class="no">Closed</td><td class="no">Closed</td><td>Lazy Rome day</td></tr>
       <tr><td class="day">Sat 1/2</td><td class="yes">Open</td><td class="yes">Open</td><td>Depart</td></tr>
     </table>
     </div>
-    <p class="rhythm">Winter hours: Colosseum/Forum/Palatine close ~4:30pm (last entry ~3:30pm) — morning visits. Vatican 8am–8pm Mon–Sat (last entry 6pm). *Dec 31 the ancient sites may close a bit early for NYE.</p>
+    <p class="rhythm">Winter hours: Colosseum/Forum/Palatine close ~4:30pm (last entry ~3:30pm) — morning visits. Vatican 8am–8pm Mon–Sat (last entry 6pm). Dec 27 is the Vatican's free last-Sunday — free entry means mobbed and an early 2pm close, so your Vatican tour sits on Dec 29 instead. *Dec 31 the ancient sites may close a bit early for NYE.</p>
   </section>
 
   <!-- TICKETS -->
   <section id="tickets">
     <h2>🎟️ Tickets — Where &amp; When to Buy</h2>
-    <p class="lead">The two that sell out — the Colosseum and the Vatican — are the ones to get right. Buy from the official sites; skip resellers unless you want a guide.</p>
+    <p class="lead">A few of these sell out — the Colosseum, the Vatican tour, and the cooking class. Buy the Colosseum from the official site; the Vatican is a guided tour you book direct with the operator.</p>
     <div class="card">
-      <div class="tk"><div><b>Colosseum + Forum + Palatine</b><br><span class="sp">One combined ticket. Add the arena floor / underground for the teens.</span><br><a href="https://ticketing.colosseo.it" target="_blank">ticketing.colosseo.it →</a></div><div class="when">Buy exactly<br>30 days out</div></div>
-      <div class="tk"><div><b>Vatican Museums + Sistine Chapel</b><br><span class="sp">Earliest morning entry. Skip-the-line or guided "early access" is worth it.</span><br><a href="https://tickets.museivaticani.va" target="_blank">tickets.museivaticani.va →</a></div><div class="when">Buy ~60<br>days out</div></div>
-      <div class="tk"><div><b>Borghese Gallery</b> (optional, Dec 29)<br><span class="sp">Mandatory timed 2-hour slot. Bernini + Caravaggio.</span><br><a href="https://galleriaborghese.cultura.gov.it" target="_blank">galleriaborghese.cultura.gov.it →</a></div><div class="when">Buy several<br>weeks out</div></div>
+      <div class="tk"><div><b>Colosseum + Forum + Palatine</b> (Dec 27)<br><span class="sp">One combined ticket. Add the arena floor / underground for the teens.</span><br><a href="https://ticketing.colosseo.it" target="_blank">ticketing.colosseo.it →</a></div><div class="when">Buy exactly<br>30 days out</div></div>
+      <div class="tk"><div><b>Vatican — "Pristine Sistine" tour, Walks of Italy</b> (Dec 29)<br><span class="sp">Small group, in before the public — you stand in a near-empty Sistine Chapel, then the museums and St. Peter's. The way to do the Vatican with teens.</span><br><a href="https://www.walksofitaly.com/rome-tours/pristine-sistine-chapel-tour/" target="_blank">walksofitaly.com →</a></div><div class="when">Book early —<br>it sells out</div></div>
+      <div class="tk"><div><b>Pasta cooking class</b> (Dec 28)<br><span class="sp">Hands-on fresh pasta (most do tiramisu too), centro storico. A great downtime afternoon between the two big sights.</span><br><a href="https://www.cookly.me/do/369-pasta-making-class-tiramisu/in/rome" target="_blank">See classes →</a></div><div class="when">Book a few<br>weeks out</div></div>
+      <div class="tk"><div><b>Borghese Gallery</b> (optional, Dec 31)<br><span class="sp">Mandatory timed 2-hour slot. Bernini + Caravaggio.</span><br><a href="https://galleriaborghese.cultura.gov.it" target="_blank">galleriaborghese.cultura.gov.it →</a></div><div class="when">Buy several<br>weeks out</div></div>
       <div class="tk"><div><b>Pantheon</b><br><span class="sp">Small entry fee; book online to skip the line, or just walk past.</span><br><a href="https://www.pantheonroma.com" target="_blank">pantheonroma.com →</a></div><div class="when">A few days<br>ahead is fine</div></div>
-      <div class="tk"><div><b>St. Peter's Basilica</b><br><span class="sp">Free — no ticket. Dome-climb ticket on site. Cover knees &amp; shoulders.</span></div><div class="when">None<br>needed</div></div>
+      <div class="tk"><div><b>St. Peter's Basilica</b><br><span class="sp">Free — no ticket (and it's part of the Pristine Sistine tour). Cover knees &amp; shoulders.</span></div><div class="when">None<br>needed</div></div>
     </div>
-    <div class="flag"><b>Set two alarms now:</b> 60 days before Dec 30 (Vatican opens) and 30 days before Dec 28 (Colosseum opens). The Colosseum can sell out within hours.</div>
+    <div class="flag"><b>Do these first:</b> book the <b>Pristine Sistine tour</b> now — small-group early-access slots go early. Then set an alarm for 30 days before Dec 27, when the <b>Colosseum</b> ticket releases; it can sell out within hours.</div>
   </section>
 
   <!-- ITINERARY -->
@@ -820,17 +822,21 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <div class="card"><div class="dayhead"><span class="num">Day 1</span><span class="date">Sat · Dec 26</span><span class="tag easy">Arrival · easy</span></div>
       <p class="rhythm">You land jet-lagged. Nothing ticketed — just stay awake till a normal bedtime.</p>
       <div class="block"><div class="t">Midday → evening</div><ul><li>Settle into the Monti flat, first pizza or pasta nearby.</li><li>Easy loop: <b>Pantheon</b>, <b>Trevi Fountain</b>, gelato.</li><li><b>Piazza Navona Christmas market</b> in the evening — runs through Jan 6.</li><li>Early dinner in Monti, then sleep.</li></ul></div></div>
-    <div class="card"><div class="dayhead"><span class="num">Day 2</span><span class="date">Sun · Dec 27</span><span class="tag trip">Day trip — Orvieto</span></div>
-      <p class="rhythm">Vatican's a free-Sunday zoo and the Colosseum deserves fresh legs, so this is the day to leave town. Details in the <a href="#orvieto">Day Trip</a> section.</p>
-      <div class="block"><div class="t">The gist</div><ul><li>Morning train Roma Termini → <b>Orvieto</b> (~1h15), funicular up to the hilltop old town.</li><li>Wander, the stunning <b>Duomo</b>, long Umbrian lunch, optional caves.</li><li>Late-afternoon train back. Easy dinner in Rome.</li></ul></div></div>
-    <div class="card"><div class="dayhead"><span class="num">Day 3</span><span class="date">Mon · Dec 28</span><span class="tag big">Colosseum + Forum + Palatine</span></div>
-      <div class="block"><div class="t">Morning</div><ul><li><b>Colosseum</b> on your 9:00–9:30 slot — consider the arena floor / underground for the teens. It's a short walk from the flat.</li><li>Straight into the <b>Roman Forum + Palatine Hill</b> on the same ticket. 3–4 hours.</li></ul></div>
-      <div class="block"><div class="t">Afternoon</div><ul><li>Lunch and a wander back home in <b>Monti</b>, right behind the Forum.</li></ul></div></div>
-    <div class="card"><div class="dayhead"><span class="num">Day 4</span><span class="date">Tue · Dec 29</span><span class="tag easy">Downtime + art</span></div>
-      <div class="block"><div class="t">Late morning → evening</div><ul><li><b>Villa Borghese</b> park + the <b>Pincio</b> terrace overlook.</li><li>Optional: the <b>Borghese Gallery</b> (reserved 2-hour slot).</li><li>Down the <b>Spanish Steps</b> into the shopping streets; back through <b>Trevi</b> at night.</li></ul></div></div>
-    <div class="card"><div class="dayhead"><span class="num">Day 5</span><span class="date">Wed · Dec 30</span><span class="tag big">Vatican + Sistine + St. Peter's</span></div>
-      <div class="block"><div class="t">Morning</div><ul><li><b>Vatican Museums</b> on the earliest entry, funneling to the <b>Sistine Chapel</b>. Early is everything.</li><li><b>St. Peter's Basilica</b> (free); climb the <b>dome</b> if legs allow.</li></ul></div>
-      <div class="block"><div class="t">Afternoon</div><ul><li>Lunch near the Vatican, then a lazy afternoon.</li></ul></div></div>
+    <div class="card"><div class="dayhead"><span class="num">Day 2</span><span class="date">Sun · Dec 27</span><span class="tag big">Colosseum + Forum + Palatine</span></div>
+      <p class="rhythm">First full day, all in Rome — no out-of-town trip while you're still finding your feet. And the Colosseum is a ten-minute walk from your door, so it's the easiest big sight to open with.</p>
+      <div class="block"><div class="t">Morning</div><ul><li><b>Colosseum</b> on your 9:00–9:30 slot — consider the arena floor / underground for the teens.</li><li>Straight into the <b>Roman Forum + Palatine Hill</b> on the same ticket. 3–4 hours in all.</li></ul></div>
+      <div class="block"><div class="t">Afternoon</div><ul><li>Lunch and an easy wander home through <b>Monti</b>, right behind the Forum.</li><li>Sunset over the city from the <b>Vittoriano</b> glass lift if you've got the legs.</li></ul></div></div>
+    <div class="card"><div class="dayhead"><span class="num">Day 3</span><span class="date">Mon · Dec 28</span><span class="tag food">Centro storico + pasta cooking class</span></div>
+      <p class="rhythm">A lighter day on purpose — it sits between the two big sights, so keep it loose. The cooking class is the anchor; build the rest of the day around it.</p>
+      <div class="block"><div class="t">Morning → afternoon</div><ul><li>Walk the <b>centro storico</b>: <b>Pantheon</b>, <b>Piazza Navona</b> (the Christmas market runs through Jan 6), <b>Campo de' Fiori</b>, the <b>Trevi Fountain</b>, up the <b>Spanish Steps</b>.</li><li><b>Pasta cooking class</b> — hands-on fresh pasta, usually with tiramisu and a bit of wine. Most central classes run 2–3 hours and you eat what you make. Book it for midday or early evening (link in <a href="#tickets">Tickets</a>).</li></ul></div>
+      <div class="block"><div class="t">Evening</div><ul><li>If the class is midday, a relaxed dinner near Navona; if it's evening, you're already fed — gelato and a stroll home.</li></ul></div></div>
+    <div class="card"><div class="dayhead"><span class="num">Day 4</span><span class="date">Tue · Dec 29</span><span class="tag big">Vatican — Pristine Sistine tour</span></div>
+      <p class="rhythm">An early start, but the best thing you'll do all week. The <b>Walks of Italy "Pristine Sistine"</b> tour gets you into the Sistine Chapel before the public — near-empty, quiet, no shuffle.</p>
+      <div class="block"><div class="t">Early morning</div><ul><li>Meet your <b>Walks of Italy</b> guide for the <b>Pristine Sistine</b> early-access tour: the <b>Sistine Chapel</b> first, then the <b>Vatican Museums</b> and <b>St. Peter's Basilica</b>.</li><li>Dress code is real — knees and shoulders covered for the basilica.</li></ul></div>
+      <div class="block"><div class="t">Afternoon</div><ul><li>Lunch in the Borgo, then the riverside walk to <b>Castel Sant'Angelo</b>.</li><li>Easy evening back near the flat — don't overbook; it's a full morning.</li></ul></div></div>
+    <div class="card"><div class="dayhead"><span class="num">Day 5</span><span class="date">Wed · Dec 30</span><span class="tag trip">Day trip — Orvieto</span></div>
+      <p class="rhythm">Big two are done, so take a breather out of town. A clean, car-free day trip you can walk end to end. Details in the <a href="#orvieto">Day Trip</a> section.</p>
+      <div class="block"><div class="t">The gist</div><ul><li>Morning train Roma Termini → <b>Orvieto</b> (~1h15), funicular up to the hilltop old town.</li><li>Wander, the stunning <b>Duomo</b>, long Umbrian lunch, optional caves and the double-helix well.</li><li>Late-afternoon train back. Easy dinner in Rome.</li></ul></div></div>
     <div class="card"><div class="dayhead"><span class="num">Day 6</span><span class="date">Thu · Dec 31</span><span class="tag holiday">New Year's Eve</span></div>
       <p class="rhythm">Light daytime; save energy for the night. Dinner options in the <a href="#nye">NYE</a> section.</p>
       <div class="block"><div class="t">Daytime</div><ul><li><b>Campo de' Fiori</b> market, lunch in the <b>Jewish Ghetto</b> (fried artichokes), the <b>Torre Argentina</b> cat sanctuary. Rest mid-afternoon.</li></ul></div>
@@ -845,8 +851,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   <!-- ORVIETO -->
   <section id="orvieto">
-    <h2>🚆 Day Trip — Orvieto (Dec 27)</h2>
-    <p class="lead">A no-car day trip on a day the big sights are shut, somewhere you can walk, eat well, and get back easily.</p>
+    <h2>🚆 Day Trip — Orvieto (Dec 30)</h2>
+    <p class="lead">Slotted after the Colosseum and the Vatican, so it's a relaxed day out — no car, somewhere you can walk end to end, eat well, and get back easily.</p>
     <div class="card"><h3>Why Orvieto</h3>
       <p>A dramatic Umbrian town on a plug of volcanic rock, about <b>75 minutes by direct train</b> from Rome. You step off, ride a little <b>funicular</b> up the cliff, and the whole old town is compact and flat enough to explore on foot. The <b>Duomo</b> is one of Italy's great Gothic cathedrals. Add caves under the city, medieval lanes, and hearty Umbrian food.</p></div>
     <div class="card"><h3>The plan</h3>
@@ -877,14 +883,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <h2>✅ Book These Before You Go</h2>
     <p class="lead">Apartment's done. These are what's left, roughly in order of urgency.</p>
     <ul class="chk">
-      <li><b>Colosseum combined ticket (Dec 28)</b> — releases 30 days ahead and sells out. Alarm on release day.</li>
-      <li><b>Vatican early entry (Dec 30)</b> — book ~60 days out, earliest slot.</li>
-      <li><b>Borghese Gallery (Dec 29, optional)</b> — reserved 2-hour slot.</li>
+      <li><b>Pristine Sistine tour — Walks of Italy (Dec 29)</b> — book first; small-group early-access slots go early.</li>
+      <li><b>Colosseum combined ticket (Dec 27)</b> — releases 30 days ahead and sells out. Alarm on release day.</li>
+      <li><b>Pasta cooking class (Dec 28)</b> — book a few weeks out; pick midday or early evening.</li>
+      <li><b>Borghese Gallery (Dec 31, optional)</b> — reserved 2-hour slot.</li>
       <li><b>NYE dinner</b> — reserve once menus post in November (I can book it).</li>
-      <li><b>Orvieto train (Dec 27)</b> — the regionale doesn't need advance booking; a Florence Frecciarossa does.</li>
+      <li><b>Orvieto train (Dec 30)</b> — the regionale doesn't need advance booking; a Florence Frecciarossa does.</li>
       <li><b>Airport transfer (Jan 2)</b> — pre-arrange a car or know your train.</li>
     </ul>
-    <div class="flag good"><b>Guides pay off twice:</b> a licensed guide for the Colosseum and the Vatican keeps the teens engaged and skips the worst lines.</div>
+    <div class="flag good"><b>The Vatican's handled:</b> the Pristine Sistine tour already comes with a guide, so that's the teens' toughest crowd beaten. For the Colosseum, a licensed guide or the arena-floor add-on does the same job.</div>
   </section>
 
   <footer><p>Built for Ben's family trip · staying in Monti · hours, closures &amp; ticket sites confirmed against official Vatican Museums and Parco archeologico del Colosseo sources for Dec 2026 – Jan 2027.</p></footer>
@@ -943,7 +950,7 @@ var homeMarker=L.marker(home.at,{icon:homeIcon,zIndexOffset:1000}).bindPopup(
 var sights=[
  {nm:"Colosseum",at:[41.8902,12.4922],note:"+ Forum & Palatine (one ticket). Winter last entry ~3:30pm. Closed Jan 1.",tk:"https://ticketing.colosseo.it",tkl:"Book 30 days ahead — sells out"},
  {nm:"Roman Forum & Palatine",at:[41.8925,12.4853],note:"Included with the Colosseum ticket.",tk:"https://ticketing.colosseo.it",tkl:"Book 30 days ahead"},
- {nm:"Vatican Museums & Sistine Chapel",at:[41.9065,12.4536],note:"Closed Dec 26, 31 & Jan 1. Best on Dec 30.",tk:"https://tickets.museivaticani.va",tkl:"Book ~60 days ahead, earliest slot"},
+ {nm:"Vatican Museums & Sistine Chapel",at:[41.9065,12.4536],note:"Closed Dec 26, 31 & Jan 1. Your Pristine Sistine tour: Dec 29.",tk:"https://tickets.museivaticani.va",tkl:"Book ~60 days ahead, earliest slot"},
  {nm:"St. Peter's Basilica",at:[41.9022,12.4539],note:"Free. Dome climb ticket on site. Cover knees & shoulders.",tk:"",tkl:""},
  {nm:"Borghese Gallery",at:[41.9142,12.4923],note:"Reserved 2-hour slot required. Bernini & Caravaggio.",tk:"https://galleriaborghese.cultura.gov.it",tkl:"Book weeks ahead, timed entry"},
  {nm:"Piazza Navona",at:[41.8992,12.4731],note:"Christmas market through Jan 6. Free. Best in the evening.",tk:"",tkl:""},
