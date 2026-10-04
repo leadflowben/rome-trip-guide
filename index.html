@@ -908,7 +908,7 @@ if(typeof L==='undefined'){return;}
 var cfg=window.__MAPCFG||{mapId:'map',legendId:'legendBody',scrollZoom:true};
 function abnb(id){return 'https://www.airbnb.com/rooms/'+id+'?check_in=2026-12-26&check_out=2027-01-02&adults=4';}
 var map=L.map(cfg.mapId,{zoomControl:true,scrollWheelZoom:cfg.scrollZoom}).setView([41.8985,12.4820],14);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap © CARTO',subdomains:'abcd',maxZoom:19}).addTo(map);
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles © Esri — Esri, HERE, Garmin, FAO, NOAA, USGS',maxNativeZoom:16,maxZoom:19}).addTo(map);
 
 // Offline base features so the map orients even where external tiles are blocked (e.g. the preview panel)
 var tiber=[[41.9270,12.4660],[41.9180,12.4720],[41.9120,12.4740],[41.9070,12.4715],[41.9035,12.4675],[41.9005,12.4658],[41.8975,12.4665],[41.8945,12.4685],[41.8925,12.4735],[41.8895,12.4772],[41.8865,12.4792],[41.8835,12.4800],[41.8790,12.4762],[41.8740,12.4735]];
