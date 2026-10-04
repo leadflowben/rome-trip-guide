@@ -735,10 +735,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <body>
 <header class="hero">
   <div>
-    <p class="kicker">First-Timers · Winter · Family of Four</p>
+    <p class="kicker">First-Timers · Winter · Party of Six</p>
     <h1>Rome, Start to Finish</h1>
     <p>Arrive Sat Dec 26 · Depart Sat Jan 2 · 7 nights</p>
-    <p>2 adults · 2 teens (18 &amp; 15) · balanced pace</p>
+    <p>6 of us · Ben &amp; Ashley · Carter &amp; Caroline · Shane &amp; Beau · balanced pace</p>
     <span class="who">Staying in Monti · sights, tickets, day trip &amp; itinerary</span>
   </div>
 </header>
@@ -757,7 +757,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <div class="wrap">
 
   <div class="flag">
-    <b>Read this first.</b> You're booked at the elegant flat in <b>Monti</b>. Your dates span two national holidays and New Year's, so the plan threads around the closures: the <b>Colosseum</b> on your first full day (Dec 27, right in your backyard), a lighter centro day with a <b>pasta cooking class</b> (Dec 28), the <b>Vatican</b> Pristine Sistine tour (Dec 29), a day trip to <b>Orvieto</b> (Dec 30), then New Year's and a slow holiday. The two marquee sights sit a day apart on purpose, so you're never doing back-to-back blockbusters. Everything below is the plan.
+    <b>Read this first.</b> All six of you are booked at the <b>Domus Opera</b> flat in <b>Monti</b> (room assignments are in Your Stay below). Your dates span two national holidays and New Year's, so the plan threads around the closures: the <b>Colosseum</b> on your first full day (Dec 27, right in your backyard), a lighter centro day with a <b>pasta cooking class</b> (Dec 28), the <b>Vatican</b> Pristine Sistine tour (Dec 29), a day trip to <b>Orvieto</b> (Dec 30), then New Year's and a slow holiday. The two marquee sights sit a day apart on purpose, so you're never doing back-to-back blockbusters. Everything below is the plan.
   </div>
 
   <!-- MAP -->
@@ -772,11 +772,20 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <!-- YOUR STAY -->
   <section id="stay">
     <h2>🏠 Your Stay</h2>
-    <p class="lead">Booked and done — here's home base.</p>
+    <p class="lead">Booked and done — here's home base for all six of us.</p>
     <div class="card">
-      <h3>Elegant renovated flat in Rione Monti</h3>
-      <p><b>Monti</b> · 3 bedrooms · 3 beds · 3 bathrooms · ★ 5.0 (21) · Superhost · ~$760/night ($5,323 for 7 nights)</p>
-      <p>A charming, lived-in neighborhood a ten-minute walk from the Colosseum and the Forum, with wine bars and trattorias right outside the door — and central enough to walk to most of the itinerary below. <a href="https://www.airbnb.com/rooms/1628335019499125069?check_in=2026-12-26&check_out=2027-01-02&adults=4" target="_blank">View the listing →</a></p>
+      <h3>Domus Opera — bright apartment, Monti</h3>
+      <p><b>Monti</b> · 3 bedrooms · sleeps 6 · 3 bathrooms · ★ 4.97 (32) · Superhost · ~$760/night</p>
+      <p>A charming, lived-in neighborhood a ten-minute walk from the Colosseum and the Forum, with wine bars and trattorias right outside the door — and central enough to walk to most of the itinerary below. <a href="https://www.airbnb.com/rooms/1628335019499125069?check_in=2026-12-26&check_out=2027-01-02&adults=6" target="_blank">View the listing →</a></p>
+      <h3 style="margin-top:20px">🛏️ Who sleeps where</h3>
+      <table>
+        <tr><th>Room</th><th>Who</th></tr>
+        <tr><td class="day">Bedroom 1 — double</td><td>Ben &amp; Ashley</td></tr>
+        <tr><td class="day">Bedroom 2</td><td>Shane &amp; Beau</td></tr>
+        <tr><td class="day">Bedroom 3 — small double</td><td>Carter</td></tr>
+        <tr><td class="day">Living room — sofa bed</td><td>Caroline</td></tr>
+      </table>
+      <p class="rhythm"><b>Bathrooms (3):</b> Ben &amp; Ashley take the third (en-suite); Carter &amp; Caroline share one; Shane &amp; Beau share the other — confirm which bath pairs with which room once you're in.</p>
     </div>
   </section>
 
@@ -906,7 +915,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <script>(function(){
 if(typeof L==='undefined'){return;}
 var cfg=window.__MAPCFG||{mapId:'map',legendId:'legendBody',scrollZoom:true};
-function abnb(id){return 'https://www.airbnb.com/rooms/'+id+'?check_in=2026-12-26&check_out=2027-01-02&adults=4';}
+function abnb(id){return 'https://www.airbnb.com/rooms/'+id+'?check_in=2026-12-26&check_out=2027-01-02&adults=6';}
 var map=L.map(cfg.mapId,{zoomControl:true,scrollWheelZoom:cfg.scrollZoom}).setView([41.8985,12.4820],14);
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles © Esri — Esri, HERE, Garmin, FAO, NOAA, USGS',maxNativeZoom:16,maxZoom:19}).addTo(map);
 
@@ -936,7 +945,7 @@ areas.forEach(function(a){
 });
 
 // ---- Your booked home ----
-var home={id:"1628335019499125069",nm:"Elegant renovated flat in Rione Monti",area:"Monti",br:3,beds:3,nt:760,ba:"3ba",price:"$5,323",rat:"5.0 (21)",at:[41.8968,12.4918]};
+var home={id:"1628335019499125069",nm:"Domus Opera — bright apartment, Monti",area:"Monti",br:3,beds:3,nt:760,ba:"3ba",price:"$5,323",rat:"4.97 (32)",at:[41.8968,12.4918]};
 var homeIcon=L.divIcon({className:'flagIcon',html:'🏠',iconSize:[26,26],iconAnchor:[6,24],popupAnchor:[7,-18]});
 var homeMarker=L.marker(home.at,{icon:homeIcon,zIndexOffset:1000}).bindPopup(
  '<div class="pp"><div class="nm">'+home.nm+'</div>'+
@@ -970,7 +979,7 @@ sights.forEach(function(p){var t=!!p.tk;var h='<div class="pp"><div class="nm">'
 // ---- Legend ----
 var lb=document.getElementById(cfg.legendId);
 if(lb){
- var h='<div class="cap">Where you\'re staying</div><div class="row"><span style="font-size:18px">🏠</span> Elegant flat in Rione Monti (booked)</div>';
+ var h='<div class="cap">Where you\'re staying</div><div class="row"><span style="font-size:18px">🏠</span> Domus Opera flat, Monti (booked)</div>';
  h+='<div class="cap">Neighborhoods (for orientation)</div>';
  areas.forEach(function(a){h+='<div class="row"><span class="sw" style="border-color:'+a.color+';background:'+a.color+'22"></span>'+a.name+'</div>';});
  h+='<div class="cap">Sights (tap a dot)</div><div class="row"><span class="dot" style="background:#8f3623"></span> Ticketed — buy ahead (link inside)</div><div class="row"><span class="dot" style="background:#3a5a7a"></span> Free to visit</div>';

@@ -727,7 +727,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 <script>(function(){
 if(typeof L==='undefined'){return;}
 var cfg=window.__MAPCFG||{mapId:'map',legendId:'legendBody',scrollZoom:true};
-function abnb(id){return 'https://www.airbnb.com/rooms/'+id+'?check_in=2026-12-26&check_out=2027-01-02&adults=4';}
+function abnb(id){return 'https://www.airbnb.com/rooms/'+id+'?check_in=2026-12-26&check_out=2027-01-02&adults=6';}
 var map=L.map(cfg.mapId,{zoomControl:true,scrollWheelZoom:cfg.scrollZoom}).setView([41.8985,12.4820],14);
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles © Esri — Esri, HERE, Garmin, FAO, NOAA, USGS',maxNativeZoom:16,maxZoom:19}).addTo(map);
 
@@ -757,7 +757,7 @@ areas.forEach(function(a){
 });
 
 // ---- Your booked home ----
-var home={id:"1628335019499125069",nm:"Elegant renovated flat in Rione Monti",area:"Monti",br:3,beds:3,nt:760,ba:"3ba",price:"$5,323",rat:"5.0 (21)",at:[41.8968,12.4918]};
+var home={id:"1628335019499125069",nm:"Domus Opera — bright apartment, Monti",area:"Monti",br:3,beds:3,nt:760,ba:"3ba",price:"$5,323",rat:"4.97 (32)",at:[41.8968,12.4918]};
 var homeIcon=L.divIcon({className:'flagIcon',html:'🏠',iconSize:[26,26],iconAnchor:[6,24],popupAnchor:[7,-18]});
 var homeMarker=L.marker(home.at,{icon:homeIcon,zIndexOffset:1000}).bindPopup(
  '<div class="pp"><div class="nm">'+home.nm+'</div>'+
@@ -791,7 +791,7 @@ sights.forEach(function(p){var t=!!p.tk;var h='<div class="pp"><div class="nm">'
 // ---- Legend ----
 var lb=document.getElementById(cfg.legendId);
 if(lb){
- var h='<div class="cap">Where you\'re staying</div><div class="row"><span style="font-size:18px">🏠</span> Elegant flat in Rione Monti (booked)</div>';
+ var h='<div class="cap">Where you\'re staying</div><div class="row"><span style="font-size:18px">🏠</span> Domus Opera flat, Monti (booked)</div>';
  h+='<div class="cap">Neighborhoods (for orientation)</div>';
  areas.forEach(function(a){h+='<div class="row"><span class="sw" style="border-color:'+a.color+';background:'+a.color+'22"></span>'+a.name+'</div>';});
  h+='<div class="cap">Sights (tap a dot)</div><div class="row"><span class="dot" style="background:#8f3623"></span> Ticketed — buy ahead (link inside)</div><div class="row"><span class="dot" style="background:#3a5a7a"></span> Free to visit</div>';
